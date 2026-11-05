@@ -3,7 +3,7 @@
  * Set SITE_MODE=full to serve every path from this host instead. Pure functions, safe for the edge middleware.
  */
 export const PORTAL_PREFIXES = [
-  "/.well-known", "/_next", "/account", "/api/auth", "/api/b2b-lead", "/api/cron", "/api/files", "/api/growqr-profile", "/api/health", "/api/internships", "/api/portal", "/api/razorpay", "/api/salesiq", "/api/send-contact", "/api/studio", "/api/t", "/api/upload-resume", "/api/v1", "/applications", "/auth", "/billing", "/cart", "/checkout", "/console", "/contact", "/crm-file.js", "/data-deletion", "/employer", "/enterprise", "/favicon.ico", "/file", "/forgot-password", "/go", "/growqr-logo.png", "/login", "/passport", "/pricing", "/privacy-policy", "/refund-policy", "/reset-password", "/robots.txt", "/signup", "/sitemap.xml", "/solutions", "/studio", "/support", "/v", "/verify", "/verify-email",
+  "/.well-known", "/_next", "/account", "/api/auth", "/api/b2b-lead", "/api/cron", "/api/files", "/api/growqr-profile", "/api/health", "/api/newsletter", "/api/internships", "/api/portal", "/api/razorpay", "/api/salesiq", "/api/send-contact", "/api/studio", "/api/t", "/api/upload-resume", "/api/v1", "/applications", "/auth", "/billing", "/cart", "/checkout", "/console", "/contact", "/crm-file.js", "/data-deletion", "/employer", "/enterprise", "/favicon.ico", "/file", "/forgot-password", "/go", "/growqr-logo.png", "/login", "/passport", "/pricing", "/privacy-policy", "/refund-policy", "/reset-password", "/robots.txt", "/signup", "/sitemap.xml", "/solutions", "/studio", "/support", "/v", "/verify", "/verify-email",
 ];
 
 export function isPortalPath(pathname: string): boolean {
