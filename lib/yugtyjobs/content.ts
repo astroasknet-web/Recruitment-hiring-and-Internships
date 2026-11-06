@@ -7,8 +7,8 @@ export const BRAND = { name: "YugtyJobs", tagline: "Jobs and internships, verifi
 
 const env = (v: string | undefined, fallback: string) => (v && /^https?:\/\/\S+$/i.test(v.trim()) ? v.trim() : fallback);
 
-/** Where candidates browse openings. Set NEXT_PUBLIC_APP_URL_INTERNSHIPS to the internships app; until then they are sent to sign-up. */
-export const OPENINGS_URL = env(process.env.NEXT_PUBLIC_APP_URL_INTERNSHIPS, "/signup?role=candidate");
+/** Where candidates browse openings: the internships board in this app. Set NEXT_PUBLIC_APP_URL_INTERNSHIPS to point at a separate deployment instead. */
+export const OPENINGS_URL = env(process.env.NEXT_PUBLIC_APP_URL_INTERNSHIPS, "/internships");
 
 export type Item = { name: string; text: string; href: string };
 
@@ -35,7 +35,7 @@ export const LISTINGS: Listing[] = [
 ];
 
 export const HIRE_PIPELINE: Item[] = [
-  { name: "QR Score", text: "A free resume score out of 100 in seconds, with a grade and your three biggest fixes.", href: "/signup?role=candidate" },
+  { name: "QR Score", text: "A free resume score out of 100 in seconds, with a grade and your three biggest fixes.", href: "/resume-score" },
   { name: "Resume Studio", text: "45 template and style combinations, live scoring and an ATS-aware export.", href: "/studio" },
   { name: "Skill Passport", text: "Scored, proctored proof that any employer can scan with a QR code.", href: "/passport" },
   { name: "Apply", text: "Verified employers and no application fees, with every stage in one place.", href: OPENINGS_URL },

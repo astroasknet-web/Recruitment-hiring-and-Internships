@@ -26,7 +26,7 @@ export default function JobsHome() {
               ))}
             </p>
             <div className="vl-cta-row">
-              <Link className="vl-btn vl-btn-primary" href="/signup?role=candidate">Get your free QR Score</Link>
+              <Link className="vl-btn vl-btn-primary" href="/resume-score">Get your free QR Score</Link>
               <Link className="vl-btn vl-btn-ghost" href="/employer/post">Post a job or internship</Link>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function JobsHome() {
         <section className="dv-final dv-rv" aria-label="Get started">
           <h2>Your next opportunity starts with one score.</h2>
           <div className="vl-cta-row vl-cta-center">
-            <Link className="vl-btn vl-btn-primary" href="/signup?role=candidate">Get your free QR Score</Link>
+            <Link className="vl-btn vl-btn-primary" href="/resume-score">Get your free QR Score</Link>
             <Link className="vl-btn vl-btn-ghost" href="/contact">Talk to us</Link>
           </div>
           <p className="dv-final-note">YugtyJobs</p>

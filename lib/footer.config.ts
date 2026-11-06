@@ -38,6 +38,9 @@ export const FOOTER: FooterConfig = {
       { href: "/enterprise/ai-recruiter", label: "AI recruiter" },
     ] },
     { title: "Candidates", links: [
+      { href: "/internships", label: "Internships" },
+      { href: "/resume-score", label: "Free QR Score" },
+      { href: "/ai-resume-expert", label: "AI Resume Expert" },
       { href: "/studio", label: "Resume Studio" },
       { href: "/passport", label: "Skill Passport" },
       { href: "/applications", label: "My applications" },
