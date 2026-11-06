@@ -21,7 +21,7 @@ export type Sort = (typeof SORTS)[number];
 export const PER_PAGE = 12;
 
 export interface Filters {
-  q: string; cat: string; loc: string[]; mode: string[]; min: number; weeks: number;
+  type: "" | "job" | "internship"; q: string; cat: string; loc: string[]; mode: string[]; min: number; weeks: number;
   verified: boolean; ppo: boolean; fresh: boolean; short: boolean; saved: boolean; sort: string; page: number;
 }
 
@@ -38,7 +38,9 @@ export function parseFilters(sp: Params): Filters {
   const cat = one(sp.cat);
   const min = int(sp.min);
   const weeks = int(sp.weeks);
+  const type = one(sp.type);
   return {
+    type: type === "job" || type === "internship" ? type : "",
     q: Array.from(one(sp.q).trim()).slice(0, 80).join(""),
     cat: CATEGORIES.some((c) => c[0] === cat) ? cat : "",
     loc: LOCATIONS.filter((l) => many(sp.loc).includes(l)),
@@ -68,6 +70,7 @@ export function run(all: Job[], f: Filters, o: { isStudent: boolean; hasProfile:
   if (sort === "relevance" && s.mode === "all") sort = o.hasProfile ? "match" : "new";
   const onlySaved = o.isStudent && f.saved;
   const res = s.jobs.filter((j) => {
+    if (f.type && j.kind !== f.type) return false;
     if (f.cat !== "" && j.cat !== f.cat) return false;
     if (f.loc.length && !f.loc.includes(j.loc)) return false;
     if (f.mode.length && !f.mode.includes(j.mode)) return false;
@@ -93,6 +96,7 @@ export function run(all: Job[], f: Filters, o: { isStudent: boolean; hasProfile:
   const pages = Math.max(1, Math.ceil(total / PER_PAGE));
   const page = Math.min(f.page, pages);
   const chips: Listing["chips"] = [];
+  if (f.type) chips.push({ label: f.type === "job" ? "Jobs" : "Internships", drop: { type: true } });
   if (f.q !== "") chips.push({ label: `"${f.q}"`, drop: { q: true } });
   if (f.cat !== "") chips.push({ label: f.cat, drop: { cat: true } });
   for (const l of f.loc) chips.push({ label: l, drop: {}, arrayVal: ["loc", l] });
@@ -119,6 +123,7 @@ export function url(f: Filters, defaultSort: string, change: { drop?: Partial<Re
     (p as unknown as Record<string, unknown>)[k] = cur.includes(v) ? cur.filter((x) => x !== v) : [...cur, v];
   }
   const q = new URLSearchParams();
+  if (p.type) q.set("type", p.type);
   if (p.q) q.set("q", p.q);
   if (p.cat) q.set("cat", p.cat);
   for (const l of p.loc) q.append("loc", l);

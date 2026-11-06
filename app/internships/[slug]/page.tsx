@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!databaseConfigured()) return { title: "Internship | YugtyJobs" };
   const job = await jobs.bySlug(clean((await params).slug));
   if (!job) return { title: "Internship not found | YugtyJobs", robots: { index: false, follow: true } };
-  const desc = `${job.title} in ${job.loc}, ${rupees(job.stipend)}/month for ${job.weeks} weeks. ${job.about}`;
+  const desc = `${job.title} in ${job.loc}, ${rupees(job.stipend)}/month${job.kind === "job" ? "" : ` for ${job.weeks} weeks`}. ${job.about}`;
   return {
-    title: `${job.title} at ${job.company} | YugtyJobs Internships`,
+    title: `${job.title} at ${job.company} | YugtyJobs`,
     description: Array.from(desc).slice(0, 155).join(""),
     alternates: { canonical: `${SITE_URL}/internships/${job.slug}` },
     robots: { index: true, follow: true },
@@ -94,7 +94,7 @@ export default async function InternshipPage({ params }: { params: Promise<{ slu
         </div>
       </header>
       <ul className="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-5">
-        {[["Stipend", `${rupees(job.stipend)} / month`], ["Duration", `${job.weeks} weeks`], ["Openings", String(job.openings)], ["Apply by", dmy(job.deadline)], ["Applicants", String(job.applicants)]].map(([k, v]) => (
+        {[[job.kind === "job" ? "Salary" : "Stipend", `${rupees(job.stipend)} / month`], ["Duration", job.kind === "job" ? "Full-time" : `${job.weeks} weeks`], ["Openings", String(job.openings)], ["Apply by", dmy(job.deadline)], ["Applicants", String(job.applicants)]].map(([k, v]) => (
           <li key={k} className="bg-white rounded-xl border border-black/[0.08] px-4 py-3"><span className="block text-[12px] text-ink-4">{k}</span><b className="text-[15px] text-ink">{v}</b></li>
         ))}
       </ul>
@@ -102,7 +102,7 @@ export default async function InternshipPage({ params }: { params: Promise<{ slu
       <div className="grid lg:grid-cols-[1fr_20rem] gap-6 mt-6 items-start">
         <div className="space-y-6 min-w-0">
           <article className="bg-white rounded-2xl border border-black/[0.08] shadow-card p-5 sm:p-7">
-            <h2 className="text-[20px] font-bold text-ink mb-2">About the internship</h2>
+            <h2 className="text-[20px] font-bold text-ink mb-2">About the {job.kind === "job" ? "job" : "internship"}</h2>
             <p className="text-[15px] text-ink-2 whitespace-pre-line">{job.about}</p>
             <List title="What you will do" items={job.do} />
             <List title="Who we are looking for" items={job.req} />

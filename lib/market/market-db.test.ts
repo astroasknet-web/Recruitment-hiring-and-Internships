@@ -17,7 +17,7 @@ const DB = process.env.PORTAL_TEST_DATABASE_URL;
 
 describe("listing rules", () => {
   const mk = (o: Partial<Job>): Job => ({
-    id: 1, slug: "s", title: "Intern", company: "Co", ini: "C", color: "#000", loc: "Remote", mode: "Remote", cat: "Data & AI", stipend: 10000, weeks: 8, badge: "PPO possible",
+    id: 1, kind: "internship", slug: "s", title: "Intern", company: "Co", ini: "C", color: "#000", loc: "Remote", mode: "Remote", cat: "Data & AI", stipend: 10000, weeks: 8, badge: "PPO possible",
     skills: ["SQL"], posted: 2, openings: 1, applicants: 0, deadline: "2099-01-01", resp: null, about: "", do: [], req: [], perks: [], q: "", status: "live", sample: false,
     owner: null, verified: false, days_left: 30, match: null, ...o,
   });

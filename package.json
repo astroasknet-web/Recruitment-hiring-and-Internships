@@ -9,6 +9,7 @@
     "lint": "next lint",
     "test": "vitest run",
     "portal:migrate": "tsx scripts/portal-migrate.ts",
+    "seed:listings": "tsx scripts/seed-sample-listings.ts",
     "demo:admin": "tsx scripts/create-demo-admin.ts"
   },
   "dependencies": {

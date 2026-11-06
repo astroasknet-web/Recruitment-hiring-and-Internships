@@ -4,6 +4,7 @@ import type { SearchJob } from "./job-search";
 /** Internship postings: queries and creation (port of Portal\Jobs). Rows are mapped to the shape the pages use. */
 export interface Job extends SearchJob {
   id: number;
+  kind: "job" | "internship";
   slug: string;
   ini: string;
   color: string;
@@ -49,6 +50,7 @@ export function map(r: Row): Job {
   const deadline = r.deadline ? String(r.deadline).slice(0, 10) : new Date(Date.now() + 30 * DAY).toISOString().slice(0, 10);
   return {
     id: Number(r.id),
+    kind: r.kind === "job" ? "job" : "internship",
     slug: String(r.slug),
     title: String(r.title),
     company: String(r.company),

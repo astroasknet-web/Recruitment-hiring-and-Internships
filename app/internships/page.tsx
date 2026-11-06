@@ -18,9 +18,9 @@ type SP = Record<string, string | string[] | undefined>;
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<SP> }): Promise<Metadata> {
   const f = listing.parseFilters(await searchParams);
-  const filtered = f.q || f.cat || f.loc.length || f.mode.length || f.min || f.weeks || f.verified || f.ppo || f.fresh || f.short || f.saved || f.page > 1;
+  const filtered = f.type || f.q || f.cat || f.loc.length || f.mode.length || f.min || f.weeks || f.verified || f.ppo || f.fresh || f.short || f.saved || f.page > 1;
   return {
-    title: "Paid internships for students and freshers | YugtyJobs",
+    title: "Jobs and paid internships for students and freshers | YugtyJobs",
     description: "Browse paid internships with a visible stipend, see how well your Skill Passport matches each role, and apply free. No placement fees, ever.",
     alternates: { canonical: `${SITE_URL}/internships` },
     robots: filtered ? { index: false, follow: true } : { index: true, follow: true },
@@ -49,11 +49,12 @@ export default async function InternshipsPage({ searchParams }: { searchParams: 
   const count = (fn: (j: jobs.Job) => boolean) => all.filter(fn).length;
   const s = L.search;
   // Link-out listings from the web: first page only, and only when no structured filter is on (they have no stipend, mode or match data to filter by).
-  const showWeb = f.page === 1 && !f.cat && !f.loc.length && !f.mode.length && !f.min && !f.weeks && !f.verified && !f.ppo && !f.fresh && !f.short && !f.saved;
+  const showWeb = f.page === 1 && f.type !== "job" && !f.cat && !f.loc.length && !f.mode.length && !f.min && !f.weeks && !f.verified && !f.ppo && !f.fresh && !f.short && !f.saved;
   const web = showWeb ? await external.live({ q: f.q, limit: 12 }) : [];
 
   const filterForm = (idp: string) => (
     <form method="get" action="/internships" className="mt-2">
+      {f.type ? <input type="hidden" name="type" value={f.type} /> : null}
       {f.q ? <input type="hidden" name="q" value={f.q} /> : null}
       {f.cat ? <input type="hidden" name="cat" value={f.cat} /> : null}
       {f.sort && f.sort !== L.defaultSort ? <input type="hidden" name="sort" value={f.sort} /> : null}
@@ -90,10 +91,16 @@ export default async function InternshipsPage({ searchParams }: { searchParams: 
 
   return (
     <MarketShell user={me} active="internships">
-      <h1 className="text-[28px] sm:text-[34px] font-bold text-ink tracking-tight">Paid internships</h1>
+      <h1 className="text-[28px] sm:text-[34px] font-bold text-ink tracking-tight">Jobs and internships</h1>
       <p className="text-[15px] text-ink-3 mt-1.5 mb-6 max-w-2xl">Every role shows its stipend. Apply free, and see how well your Skill Passport matches before you do. We never charge placement fees.</p>
 
-      <SearchBox defaultValue={f.q} preserve={{ ...(f.cat ? { cat: f.cat } : {}), ...(f.loc.length ? { loc: f.loc } : {}), ...(f.mode.length ? { mode: f.mode } : {}) }} />
+      <SearchBox defaultValue={f.q} preserve={{ ...(f.type ? { type: f.type } : {}), ...(f.cat ? { cat: f.cat } : {}), ...(f.loc.length ? { loc: f.loc } : {}), ...(f.mode.length ? { mode: f.mode } : {}) }} />
+
+      <nav aria-label="Type" className="flex gap-2 mt-4">
+        {([["", "All"], ["job", "Jobs"], ["internship", "Internships"]] as const).map(([v, label]) => (
+          <Link key={label} href={u({ set: { type: v } })} aria-current={f.type === v ? "true" : undefined} className={`min-h-[40px] inline-flex items-center px-4 rounded-full border text-[14px] font-medium ${f.type === v ? "bg-ink text-white border-ink" : "border-black/[0.15] text-ink-2 hover:bg-cream-2"}`}>{label} <span className="ml-1.5 opacity-70">{count((j) => !v || j.kind === v)}</span></Link>
+        ))}
+      </nav>
 
       <nav aria-label="Fields" className="flex flex-wrap gap-2 mt-4">
         {listing.CATEGORIES.map(([name]) => (
@@ -117,8 +124,9 @@ export default async function InternshipsPage({ searchParams }: { searchParams: 
 
         <section aria-labelledby="results-h">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-            <h2 id="results-h" className="text-[18px] font-semibold text-ink">{L.total} {L.total === 1 ? "internship" : "internships"}</h2>
+            <h2 id="results-h" className="text-[18px] font-semibold text-ink">{L.total} {L.total === 1 ? "listing" : "listings"}</h2>
             <form method="get" action="/internships" className="flex items-center gap-2">
+              {f.type ? <input type="hidden" name="type" value={f.type} /> : null}
               {f.q ? <input type="hidden" name="q" value={f.q} /> : null}
               {f.cat ? <input type="hidden" name="cat" value={f.cat} /> : null}
               {f.loc.map((l) => <input key={l} type="hidden" name="loc" value={l} />)}

@@ -48,8 +48,8 @@ export function JobCard({ job, terms = [], saved = false, canSave = false, back,
         ) : null}
       </div>
       <ul className="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-[14px] text-ink-2">
-        <li><b>{rupees(job.stipend)}</b> / month</li>
-        <li>{job.weeks} weeks</li>
+        <li><b>{rupees(job.stipend)}</b> / month{job.kind === "job" ? " salary" : ""}</li>
+        <li>{job.kind === "job" ? "Full-time" : `${job.weeks} weeks`}</li>
         <li>{job.cat}</li>
         <li>Posted {posted(job.posted)}</li>
       </ul>
