@@ -1,41 +1,29 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import SiteChrome from "@/components/layout/SiteChrome";
+import Script from "next/script";
+import { Inter, Space_Grotesk } from "next/font/google";
+import Footer from "@/components/layout/Footer";
+import JobsHome from "@/components/yugtyjobs/JobsHome";
+import "@/components/yugtyjobs/base.css";
+import "@/components/yugtyjobs/division.css";
+import "@/components/yugtyjobs/yugtyjobs.css";
+
+const display = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--vl-display", display: "swap" });
+const text = Inter({ subsets: ["latin"], variable: "--vl-text", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "GrowQR Recruitment & Hiring",
-  description: "Post roles, receive applicants ranked by match score, move candidates through your pipeline and view verified resumes. Built for recruiters, employers and hiring teams.",
+  title: "YugtyJobs: Jobs and internships, verified",
+  description: "Find verified jobs and internships, prove your skills with a scannable QR Score and apply with no fees. Employers hire screened, scored candidates.",
 };
-
-const CARDS = [
-  { href: "/employer", title: "Employer dashboard", text: "Your hiring overview, applicants and pipeline board." },
-  { href: "/employer/post", title: "Post a role", text: "Publish an internship or job. New companies are verified before roles go live." },
-  { href: "/solutions/recruiters", title: "For recruiters", text: "How GrowQR helps recruiting teams screen faster." },
-  { href: "/enterprise/ai-recruiter", title: "AI recruiter", text: "Automated screening and shortlisting." },
-];
 
 export default function Home() {
   return (
-    <SiteChrome>
-      <main className="mx-auto max-w-6xl px-5 py-14 sm:py-20">
-        <p className="text-[13px] font-semibold uppercase tracking-wider text-orange-deep">GrowQR Recruitment & Hiring</p>
-        <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl">Hire verified talent</h1>
-        <p className="mt-5 max-w-2xl text-lg text-ink-2">Post roles, receive applicants ranked by match score, move candidates through your pipeline and view verified resumes. Built for recruiters, employers and hiring teams.</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link href="/employer" className="inline-flex min-h-[48px] items-center rounded-full bg-orange px-6 font-semibold text-white">Open employer dashboard</Link>
-          <Link href="/login" className="inline-flex min-h-[48px] items-center rounded-full border border-black/15 px-6 font-semibold">Sign in</Link>
-        </div>
-        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {CARDS.map((c) => (
-            <li key={c.href}>
-              <Link href={c.href} className="block h-full rounded-2xl border border-black/10 p-6 transition hover:border-orange hover:shadow-md">
-                <h2 className="text-xl font-semibold">{c.title}</h2>
-                <p className="mt-2 text-[15px] text-ink-2">{c.text}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </main>
-    </SiteChrome>
+    <div className={`vl ${display.variable} ${text.variable}`}>
+      <a className="vl-skip" href="#main-content">Skip to content</a>
+      <JobsHome />
+      <div className="yj-foot"><Footer /></div>
+      <Script src="/yugtyjobs/fx.js" strategy="afterInteractive" />
+      <Script src="/yugtyjobs/division.js" strategy="afterInteractive" />
+      <Script src="/yugtyjobs/hire-qr.js" strategy="afterInteractive" />
+    </div>
   );
 }
