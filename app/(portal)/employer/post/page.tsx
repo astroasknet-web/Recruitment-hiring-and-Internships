@@ -7,7 +7,7 @@ import { Card, PortalPage } from "@/components/portal/shell";
 import { ResendVerification } from "@/components/portal/forms";
 import { PostForm } from "@/components/market/post-form";
 
-export const metadata: Metadata = { title: "Post a role | GrowQR" };
+export const metadata: Metadata = { title: "Post a role | YugtyJobs" };
 export const dynamic = "force-dynamic";
 
 export default async function PostRolePage() {

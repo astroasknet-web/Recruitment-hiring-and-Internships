@@ -11,7 +11,7 @@ import { available as signingAvailable } from "@/lib/portal/passport/credential"
 import { readGuest } from "@/lib/qrscore/guest";
 import "@/components/portal/auth.css";
 
-export const metadata: Metadata = { title: "Your QR Score | GrowQR", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Your QR Score | YugtyJobs", robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";
 
 const UNLOCK = [

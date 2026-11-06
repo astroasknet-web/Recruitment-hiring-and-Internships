@@ -100,7 +100,7 @@ function countWords(str: string) {
 function validate(key: keyof FormState, value: string): string | null {
   switch (key) {
     case "growqrProfileUrl":
-      if (!value.trim()) return "Your GrowQR profile link is required";
+      if (!value.trim()) return "Your YugtyJobs profile link is required";
       if (!parseGrowqrProfileId(value)) return "Paste your full link, e.g. https://app.growqr.ai/p/your-id";
       return null;
     case "fullName":
@@ -210,7 +210,7 @@ const STEP_FIELDS: Record<number, (keyof FormState)[]> = {
 };
 
 /**
- * Form fields the GrowQR profile can fill. Everything else (phone, Aadhaar,
+ * Form fields the YugtyJobs profile can fill. Everything else (phone, Aadhaar,
  * address, availability, the written answers) has no profile equivalent and
  * is asked for directly.
  */
@@ -997,7 +997,7 @@ export function InternshipApplyForm({ initialRole }: { initialRole?: string } = 
       setProfileState("failed");
       setErrors((p) => ({
         ...p,
-        growqrProfileUrl: "Couldn't reach GrowQR. Check your connection and try again.",
+        growqrProfileUrl: "Couldn't reach YugtyJobs. Check your connection and try again.",
       }));
     }
   };
@@ -1086,7 +1086,7 @@ export function InternshipApplyForm({ initialRole }: { initialRole?: string } = 
               <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange to-[#ff8c55] px-3.5 py-1.5 shadow-[0_4px_14px_rgba(255,106,47,0.35)]">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse shrink-0" />
                 <span className="text-[11px] font-bold uppercase tracking-[0.13em] text-white">
-                  GrowQR Internship Program
+                  YugtyJobs Internship Program
                 </span>
               </div>
               {initialRole && (
@@ -1112,14 +1112,14 @@ export function InternshipApplyForm({ initialRole }: { initialRole?: string } = 
               </div>
               <h2 className="text-[22px] font-bold tracking-[-0.025em] text-ink mb-2.5">Application Received!</h2>
               <p className="text-[14.5px] text-ink-3 leading-relaxed max-w-[420px]">
-                Thanks for applying to the GrowQR Internship Program. Our team will review your application and reach out if you&apos;re shortlisted for the next step.
+                Thanks for applying to the YugtyJobs Internship Program. Our team will review your application and reach out if you&apos;re shortlisted for the next step.
               </p>
               <button
                 type="button"
                 onClick={() => router.push("/")}
                 className="mt-8 inline-flex items-center gap-2 bg-orange text-white text-[14px] font-semibold px-6 py-3 rounded-full transition hover:bg-orange-dark hover:shadow-[0_12px_28px_-8px_rgba(255,106,47,0.5)]"
               >
-                Back to GrowQR
+                Back to YugtyJobs
               </button>
             </div>
           ) : (
@@ -1146,16 +1146,16 @@ export function InternshipApplyForm({ initialRole }: { initialRole?: string } = 
                           <p className="text-[12.5px] text-ink-4 mt-0.5">Basic details, takes about 60 seconds.</p>
                         </div>
 
-                        {/* ── GrowQR profile: the identity link every applicant needs ── */}
+                        {/* ── YugtyJobs profile: the identity link every applicant needs ── */}
                         <div className="rounded-xl border border-black/8 bg-orange/[0.04] p-4 md:p-5 flex flex-col gap-3">
                           <h3 className="text-[13px] font-bold tracking-[-0.01em] text-ink flex items-center gap-1.5">
                             <Sparkles className="h-3.5 w-3.5 text-orange" aria-hidden="true" />
-                            Start with your GrowQR profile
+                            Start with your YugtyJobs profile
                           </h3>
 
                           <FloatingInput
                             id="growqrProfileUrl"
-                            label="GrowQR Profile Link"
+                            label="YugtyJobs Profile Link"
                             type="url"
                             value={form.growqrProfileUrl}
                             onChange={(e) => {
@@ -1285,7 +1285,7 @@ export function InternshipApplyForm({ initialRole }: { initialRole?: string } = 
 
                         <FloatingTextarea
                           id="whyIntern"
-                          label="Why do you want to intern with GrowQR?"
+                          label="Why do you want to intern with YugtyJobs?"
                           value={form.whyIntern}
                           onChange={update("whyIntern")}
                           onBlur={blur("whyIntern")}

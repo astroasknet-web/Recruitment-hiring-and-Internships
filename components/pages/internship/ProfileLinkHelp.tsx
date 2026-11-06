@@ -102,7 +102,7 @@ export default function ProfileLinkHelp() {
           <motion.div
             id="growqr-profile-link-help"
             role="dialog"
-            aria-label="How to find your GrowQR profile link"
+            aria-label="How to find your YugtyJobs profile link"
             onMouseEnter={cancelClose}
             onMouseLeave={scheduleClose}
             initial={{ opacity: 0, y: -6, scale: 0.985 }}
@@ -125,7 +125,7 @@ export default function ProfileLinkHelp() {
             </p>
 
             <ol className="mt-3 flex flex-col gap-3">
-              <Step n={1} title="Open your GrowQR dashboard">
+              <Step n={1} title="Open your YugtyJobs dashboard">
                 <a
                   href={GROWQR_APP_URL}
                   target="_blank"

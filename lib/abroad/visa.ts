@@ -7,7 +7,7 @@ import * as vault from "./vault";
 
 /**
  * Visa case tracker (port of Portal\Visa): one case per application the student has been offered or has accepted. The student enters the
- * appointment themselves (GrowQR does not book embassy slots); we give reminders, a calendar file and a readiness check.
+ * appointment themselves (YugtyJobs does not book embassy slots); we give reminders, a calendar file and a readiness check.
  */
 export const STAGES: Record<string, string> = {
   preparing: "Preparing documents", booked: "Appointment booked", attended: "Appointment attended", pending: "Decision pending", approved: "Visa approved", refused: "Visa refused",

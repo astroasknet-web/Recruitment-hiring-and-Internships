@@ -22,9 +22,9 @@ type MenuPos = { left: number; top?: number; bottom?: number; maxHeight: number 
  * confirm dialog shows before the reviewer commits.
  */
 const EMAILING_STATUS: Record<string, { label: string; subjectHint: string }> = {
-  selected: { label: "Selected", subjectHint: "Update on your GrowQR internship application" },
-  offer: { label: "Offer", subjectHint: "Your GrowQR internship offer" },
-  rejected: { label: "Rejected", subjectHint: "Update on your GrowQR internship application" },
+  selected: { label: "Selected", subjectHint: "Update on your YugtyJobs internship application" },
+  offer: { label: "Offer", subjectHint: "Your YugtyJobs internship offer" },
+  rejected: { label: "Rejected", subjectHint: "Update on your YugtyJobs internship application" },
 };
 
 export default function InternshipStatusDropdown({ applicationId, currentStatus, onUpdate }: Props) {

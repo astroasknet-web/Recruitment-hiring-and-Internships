@@ -18,7 +18,7 @@ import { useIsMobile } from "@/lib/useIsMobile";
  *
  * Visual design adapted from the 21st.dev `pricing-card` component
  * (cards grid → "Most Popular" highlight → detailed comparison table), but
- * mapped to the site's light cream/ink/orange palette and to GrowQR's real
+ * mapped to the site's light cream/ink/orange palette and to YugtyJobs's real
  * four-plan model (Free Forever, 7-Day Sprint, Monthly, Career Accelerator).
  * Unlike the source component (3 boolean-only tiers with a monthly/annually
  * toggle), these tiers are distinct durations and the comparison cells can be

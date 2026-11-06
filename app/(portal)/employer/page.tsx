@@ -7,7 +7,7 @@ import { Alert } from "@/components/portal/ui";
 import { Card, PortalPage } from "@/components/portal/shell";
 import { moveApplicantAction } from "./actions";
 
-export const metadata: Metadata = { title: "Employer dashboard | GrowQR" };
+export const metadata: Metadata = { title: "Employer dashboard | YugtyJobs" };
 export const dynamic = "force-dynamic";
 
 const TIER: Record<string, string> = { verified: "verified", certificate: "certificate", self: "self-reported" };

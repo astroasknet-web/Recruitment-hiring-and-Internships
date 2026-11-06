@@ -51,7 +51,7 @@ function CanvaEmbed() {
         >
           <iframe
             src={INTERNSHIP_VIDEO.embedUrl}
-            title="GrowQR internship program intro"
+            title="YugtyJobs internship program intro"
             onLoad={reveal}
             className={`absolute inset-0 h-full w-full border-0 transition-opacity duration-300 ${
               ready ? "opacity-100" : "opacity-0"

@@ -1,9 +1,9 @@
 /**
- * This repository serves a single GrowQR vertical (GrowQR Recruitment & Hiring). Every path that belongs to another vertical is sent to the main site (MARKETING_URL).
+ * This repository serves a single YugtyJobs vertical (YugtyJobs Recruitment & Hiring). Every path that belongs to another vertical is sent to the main site (MARKETING_URL).
  * Set SITE_MODE=full to serve every path from this host instead. Pure functions, safe for the edge middleware.
  */
 export const PORTAL_PREFIXES = [
-  "/.well-known", "/_next", "/account", "/api/auth", "/api/b2b-lead", "/api/cron", "/api/files", "/api/growqr-profile", "/api/health", "/api/newsletter", "/api/internships", "/api/portal", "/api/razorpay", "/api/salesiq", "/api/send-contact", "/api/studio", "/api/t", "/api/upload-resume", "/api/upload-internship-resume", "/api/send-internship", "/api/v1", "/admin/internship", "/ai-resume-expert", "/applications", "/auth", "/billing", "/cart", "/checkout", "/console", "/contact", "/crm-file.js", "/data-deletion", "/employer", "/enterprise", "/favicon.ico", "/file", "/forgot-password", "/go", "/growqr-internship", "/growqr-logo.png", "/internships", "/login", "/passport", "/pricing", "/privacy-policy", "/refund-policy", "/resume-score", "/reset-password", "/robots.txt", "/score", "/signup", "/sitemap.xml", "/solutions", "/studio", "/support", "/v", "/verify", "/verify-email",
+  "/.well-known", "/_next", "/account", "/api/auth", "/api/b2b-lead", "/api/cron", "/api/files", "/api/growqr-profile", "/api/health", "/api/newsletter", "/api/internships", "/api/portal", "/api/razorpay", "/api/salesiq", "/api/send-contact", "/api/studio", "/api/t", "/api/upload-resume", "/api/upload-internship-resume", "/api/send-internship", "/api/v1", "/admin/internship", "/ai-resume-expert", "/applications", "/auth", "/billing", "/cart", "/checkout", "/console", "/contact", "/crm-file.js", "/data-deletion", "/employer", "/enterprise", "/favicon.ico", "/file", "/forgot-password", "/go", "/growqr-internship", "/yugtyjobs-logo.svg", "/internships", "/login", "/passport", "/pricing", "/privacy-policy", "/refund-policy", "/resume-score", "/reset-password", "/robots.txt", "/score", "/signup", "/sitemap.xml", "/solutions", "/studio", "/support", "/v", "/verify", "/verify-email",
 ];
 
 export function isPortalPath(pathname: string): boolean {

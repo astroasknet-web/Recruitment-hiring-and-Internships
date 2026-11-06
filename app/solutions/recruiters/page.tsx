@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: recruitersContent.meta.description,
   alternates: { canonical: canonicalUrl("/solutions/recruiters") },
   openGraph: {
-    title: "GrowQR for Recruiters",
+    title: "YugtyJobs for Recruiters",
     description: recruitersContent.hero.subline,
     url: canonicalUrl("/solutions/recruiters"),
     images: [OG_IMAGE],

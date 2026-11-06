@@ -20,7 +20,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const f = listing.parseFilters(await searchParams);
   const filtered = f.q || f.cat || f.loc.length || f.mode.length || f.min || f.weeks || f.verified || f.ppo || f.fresh || f.short || f.saved || f.page > 1;
   return {
-    title: "Paid internships for students and freshers | GrowQR",
+    title: "Paid internships for students and freshers | YugtyJobs",
     description: "Browse paid internships with a visible stipend, see how well your Skill Passport matches each role, and apply free. No placement fees, ever.",
     alternates: { canonical: `${SITE_URL}/internships` },
     robots: filtered ? { index: false, follow: true } : { index: true, follow: true },
@@ -177,7 +177,7 @@ export default async function InternshipsPage({ searchParams }: { searchParams: 
       {web.length ? (
         <section aria-labelledby="web-h" className="mt-10">
           <h2 id="web-h" className="text-[22px] font-bold text-ink tracking-tight">More internships from the web</h2>
-          <p className="text-[14px] text-ink-3 mt-1 mb-4 max-w-2xl">These are listed by other sites and employers, not by GrowQR. We have not checked the company or the stipend, and you apply on their site. Never pay to apply. Listings supplied by <a className="underline" href="https://www.adzuna.in" target="_blank" rel="noopener noreferrer">Adzuna</a>.</p>
+          <p className="text-[14px] text-ink-3 mt-1 mb-4 max-w-2xl">These are listed by other sites and employers, not by YugtyJobs. We have not checked the company or the stipend, and you apply on their site. Never pay to apply. Listings supplied by <a className="underline" href="https://www.adzuna.in" target="_blank" rel="noopener noreferrer">Adzuna</a>.</p>
           <ul className="grid gap-3">
             {web.map((w) => (
               <li key={w.id} className="bg-white rounded-2xl border border-black/[0.08] p-4">

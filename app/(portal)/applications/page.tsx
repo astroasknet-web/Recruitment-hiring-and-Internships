@@ -6,7 +6,7 @@ import * as saved from "@/lib/market/saved";
 import * as jobs from "@/lib/market/jobs";
 import { Card, PortalPage } from "@/components/portal/shell";
 
-export const metadata: Metadata = { title: "My applications | GrowQR" };
+export const metadata: Metadata = { title: "My applications | YugtyJobs" };
 export const dynamic = "force-dynamic";
 
 const PILL: Record<string, string> = {

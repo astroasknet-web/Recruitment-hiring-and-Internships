@@ -4,9 +4,9 @@ import InternshipLanding from "@/components/pages/internship/InternshipLanding";
 import { canonicalUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Internships | GrowQR",
+  title: "Internships | YugtyJobs",
   description:
-    "Intern with GrowQR across technology, design, social media, community and sales. Remote, 3 to 6 months, mentored, with a certificate and a pathway to a full-time offer.",
+    "Intern with YugtyJobs across technology, design, social media, community and sales. Remote, 3 to 6 months, mentored, with a certificate and a pathway to a full-time offer.",
   alternates: { canonical: canonicalUrl("/growqr-internship") },
 };
 

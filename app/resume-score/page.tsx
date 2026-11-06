@@ -4,7 +4,7 @@ import { getSession } from "@/lib/portal/session";
 import { MarketShell } from "@/components/market/shell";
 import { FreeScoreForm } from "@/components/portal/free-score-form";
 
-const TITLE = "Free Resume Score Checker: Get Your RQ Score | GrowQR";
+const TITLE = "Free Resume Score Checker: Get Your RQ Score | YugtyJobs";
 const DESC = "Upload your resume and get a free RQ Score out of 100 in seconds, plus what to fix first. No sign-up needed to see your score.";
 export const metadata: Metadata = {
   title: TITLE, description: DESC, robots: { index: true, follow: true }, alternates: { canonical: "/resume-score" },
@@ -16,7 +16,7 @@ export const dynamic = "force-dynamic";
 const ld = {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "WebApplication", name: "GrowQR Free Resume Score Checker", url: "/resume-score", applicationCategory: "BusinessApplication", operatingSystem: "Web",
+    { "@type": "WebApplication", name: "YugtyJobs Free Resume Score Checker", url: "/resume-score", applicationCategory: "BusinessApplication", operatingSystem: "Web",
       description: "Upload a resume and get a free score out of 100 with plain-language advice on what to improve.", offers: { "@type": "Offer", price: "0", priceCurrency: "INR" } },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "/" }, { "@type": "ListItem", position: 2, name: "Free resume score", item: "/resume-score" }] },
   ],

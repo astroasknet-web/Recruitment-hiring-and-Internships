@@ -155,7 +155,7 @@ const RELATED = {
 export const professionalsContent: PersonaPageContent = {
   id: "professionals",
   meta: {
-    title: "GrowQR for Professionals - Find the job that fits you",
+    title: "YugtyJobs for Professionals - Find the job that fits you",
     description:
       "Your AI squad finds the right role and gets you ready for it. Start with a free QR, activate agents as you need them, or subscribe for full access.",
   },
@@ -252,7 +252,7 @@ export const professionalsContent: PersonaPageContent = {
 export const studentsContent: PersonaPageContent = {
   id: "students",
   meta: {
-    title: "GrowQR for Students - Find the career that fits you",
+    title: "YugtyJobs for Students - Find the career that fits you",
     description:
       "Your AI squad maps your strengths to the careers where you'll thrive. Start with a free QR, explore paths, and land your first internship.",
   },
@@ -261,7 +261,7 @@ export const studentsContent: PersonaPageContent = {
     headline: "Find the Career That Actually Fits You.",
     subline: "Strengths mapped. Paths ranked. First internship found.",
     portrait: "/personas/student.jpg",
-    portraitAlt: "A student exploring career paths with GrowQR",
+    portraitAlt: "A student exploring career paths with YugtyJobs",
     primaryCTA: { label: "Activate your squad", href: "https://app.growqr.ai/login" },
     secondaryCTA: { label: "Get your QR (Free)", href: "https://app.growqr.ai/login" },
   },
@@ -348,7 +348,7 @@ export const studentsContent: PersonaPageContent = {
 export const coachesContent: PersonaPageContent = {
   id: "coaches",
   meta: {
-    title: "GrowQR for Coaches - Clients who pay you what you're worth",
+    title: "YugtyJobs for Coaches - Clients who pay you what you're worth",
     description:
       "Your AI squad fills your calendar with the right clients at the right rates. Grow your practice without growing your headcount.",
   },
@@ -357,7 +357,7 @@ export const coachesContent: PersonaPageContent = {
     headline: "Attract Clients Who Value Your Expertise.",
     subline: "Better-fit clients. Better engagements. Better outcomes.",
     portrait: "/personas/expert.jpg",
-    portraitAlt: "A coach running her practice with GrowQR",
+    portraitAlt: "A coach running her practice with YugtyJobs",
     primaryCTA: { label: "Activate Your Squad", href: "https://app.growqr.ai/login" },
     secondaryCTA: { label: "Get your QR (Free)", href: "https://app.growqr.ai/login" },
   },
@@ -444,7 +444,7 @@ export const coachesContent: PersonaPageContent = {
 export const freelancersContent: PersonaPageContent = {
   id: "freelancers",
   meta: {
-    title: "GrowQR for Freelancers - Gigs that pay what you deserve",
+    title: "YugtyJobs for Freelancers - Gigs that pay what you deserve",
     description:
       "Your AI squad finds better gigs, builds your network, and negotiates the rates. Raise your floor and fill your pipeline.",
   },
@@ -453,7 +453,7 @@ export const freelancersContent: PersonaPageContent = {
     headline: "I Want Gigs That Pay\nWhat I Deserve.",
     subline: "Better gigs. Stronger rates. No cold pitching.",
     portrait: "/personas/freelancer.jpg",
-    portraitAlt: "A freelancer winning better gigs with GrowQR",
+    portraitAlt: "A freelancer winning better gigs with YugtyJobs",
     primaryCTA: { label: "Activate your squad", href: "https://app.growqr.ai/login" },
     secondaryCTA: { label: "Get your QR (Free)", href: "https://app.growqr.ai/login" },
   },
@@ -540,7 +540,7 @@ export const freelancersContent: PersonaPageContent = {
 export const startupsContent: PersonaPageContent = {
   id: "startups",
   meta: {
-    title: "GrowQR for Startups - Build the right team from day one",
+    title: "YugtyJobs for Startups - Build the right team from day one",
     description:
       "Your AI squad helps you hire, assess, and close candidates without a recruiter in the loop. Hire like you have a recruiter, without hiring one.",
   },
@@ -636,7 +636,7 @@ export const startupsContent: PersonaPageContent = {
 export const recruitersContent: PersonaPageContent = {
   id: "recruiters",
   meta: {
-    title: "GrowQR for Recruiters - The right candidate, fast",
+    title: "YugtyJobs for Recruiters - The right candidate, fast",
     description:
       "Your AI squad screens at scale, interviews at scale, and hands you the shortlist that's actually worth seeing.",
   },
@@ -645,7 +645,7 @@ export const recruitersContent: PersonaPageContent = {
     headline: "Precision Hiring Starts Here.",
     subline: "Brief in. Verified shortlist out. Fast.",
     portrait: "/personas/recruiter.jpg",
-    portraitAlt: "A recruiter running placements with GrowQR",
+    portraitAlt: "A recruiter running placements with YugtyJobs",
     primaryCTA: { label: "Activate your squad", href: "https://app.growqr.ai/login" },
     secondaryCTA: { label: "Get your QR (Free)", href: "https://app.growqr.ai/login" },
   },
@@ -739,7 +739,7 @@ export const recruitersContent: PersonaPageContent = {
 export const enterprisesContent: PersonaPageContent = {
   id: "enterprises",
   meta: {
-    title: "GrowQR for Enterprises - Keep your best people happy",
+    title: "YugtyJobs for Enterprises - Keep your best people happy",
     description:
       "Your AI squad reads team signals, spots flight risk, and helps you grow the people worth keeping. Retention treated like revenue.",
   },
@@ -748,7 +748,7 @@ export const enterprisesContent: PersonaPageContent = {
     headline: "Stop Applying. Start Advancing.",
     subline: "Your QR is live. Your squad is in motion.",
     portrait: "/personas/enterprise.jpg",
-    portraitAlt: "An enterprise leader running people operations with GrowQR",
+    portraitAlt: "An enterprise leader running people operations with YugtyJobs",
     primaryCTA: { label: "Activate your squad", href: "https://app.growqr.ai/login" },
     secondaryCTA: { label: "Talk to sales", href: "/contact" },
   },
@@ -835,7 +835,7 @@ export const enterprisesContent: PersonaPageContent = {
 export const institutesContent: PersonaPageContent = {
   id: "institutes",
   meta: {
-    title: "GrowQR for Institutes - Every student placement-ready",
+    title: "YugtyJobs for Institutes - Every student placement-ready",
     description:
       "Your AI squad runs skill-gap analysis, mock interviews, and cohort tracking at scale. Raise your placement rate across the cohort.",
   },
@@ -844,7 +844,7 @@ export const institutesContent: PersonaPageContent = {
     headline: "I Want every Student\nPlacement-Ready.",
     subline: "Skill gaps closed. Mock interviews done. Cohort ready.",
     portrait: "/personas/institute.jpg",
-    portraitAlt: "An institute leader preparing cohorts with GrowQR",
+    portraitAlt: "An institute leader preparing cohorts with YugtyJobs",
     primaryCTA: { label: "Activate your squad", href: "https://app.growqr.ai/login" },
     secondaryCTA: { label: "Book a demo", href: "/contact" },
   },
@@ -924,7 +924,7 @@ export const institutesContent: PersonaPageContent = {
 export const consultantsContent: PersonaPageContent = {
   id: "consultants",
   meta: {
-    title: "GrowQR for Consultants - Placeholder",
+    title: "YugtyJobs for Consultants - Placeholder",
     description: "Placeholder content for the Consultants solution page.",
   },
   hero: {
@@ -932,7 +932,7 @@ export const consultantsContent: PersonaPageContent = {
     headline: "I Want Engagements that Match my Expertise.",
     subline: "Placeholder subline - content coming soon.",
     portrait: "/personas/expert.jpg",
-    portraitAlt: "A consultant running their practice with GrowQR",
+    portraitAlt: "A consultant running their practice with YugtyJobs",
     primaryCTA: { label: "Activate your squad", href: "https://app.growqr.ai/login" },
     secondaryCTA: { label: "Get your QR (Free)", href: "https://app.growqr.ai/login" },
   },

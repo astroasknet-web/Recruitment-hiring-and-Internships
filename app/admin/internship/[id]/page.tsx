@@ -106,7 +106,7 @@ function Field({ label, value }: { label: string; value?: string | null }) {
 /**
  * Single column rather than the 2/3 + 1/3 sidebar the ambassador detail page
  * uses. The page is ordered by what HR needs in the order they need it: the
- * decision controls, then the GrowQR profile the decision is mostly made on,
+ * decision controls, then the YugtyJobs profile the decision is mostly made on,
  * then the supporting material. The raw form fields, which were at the top,
  * are the least-read part of the page and now sit near the bottom.
  */
@@ -195,7 +195,7 @@ export default async function InternshipApplicantDetailPage({ params }: { params
           internalNotes={app.internal_notes}
         />
 
-        {/* GrowQR platform profile, as captured at submit time */}
+        {/* YugtyJobs platform profile, as captured at submit time */}
         <div className={CARD}>
           <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
             <div className="flex items-center gap-3 min-w-0">
@@ -206,7 +206,7 @@ export default async function InternshipApplicantDetailPage({ params }: { params
                 size={48}
               />
               <div className="min-w-0">
-                <h2 className={HEADING}>GrowQR Profile</h2>
+                <h2 className={HEADING}>YugtyJobs Profile</h2>
                 {snapshot?.headline && (
                   <p className="text-[13px] text-ink-3 truncate">{snapshot.headline}</p>
                 )}
@@ -236,13 +236,13 @@ export default async function InternshipApplicantDetailPage({ params }: { params
 
           {!app.growqr_user_id ? (
             <p className="text-[14px] text-ink-3">
-              No GrowQR profile linked. This application predates the profile requirement.
+              No YugtyJobs profile linked. This application predates the profile requirement.
             </p>
           ) : (
             <>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <p className="text-[12px] font-semibold text-ink-3 uppercase tracking-widest mb-1">GrowQR User ID</p>
+                  <p className="text-[12px] font-semibold text-ink-3 uppercase tracking-widest mb-1">YugtyJobs User ID</p>
                   <p className="text-[13px] text-ink-2 font-mono break-all">{app.growqr_user_id}</p>
                 </div>
                 <Field label="Target Role" value={snapshot?.target_role} />
@@ -289,7 +289,7 @@ export default async function InternshipApplicantDetailPage({ params }: { params
 
               {!snapshot && (
                 <p className="mt-4 text-[13px] text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2">
-                  Profile was linked but GrowQR was unreachable at submit time, so no details were captured.
+                  Profile was linked but YugtyJobs was unreachable at submit time, so no details were captured.
                   Open the profile link for the live version.
                 </p>
               )}
@@ -304,7 +304,7 @@ export default async function InternshipApplicantDetailPage({ params }: { params
           )}
         </div>
 
-        {/* Assessment from the GrowQR app, then the human rounds that follow */}
+        {/* Assessment from the YugtyJobs app, then the human rounds that follow */}
         <InternshipInterviewCard
           applicationId={app.id}
           candidateName={app.full_name}
@@ -324,7 +324,7 @@ export default async function InternshipApplicantDetailPage({ params }: { params
           <h2 className={`${HEADING} mb-4`}>Links &amp; Resume</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="flex flex-col gap-1.5">
-              <p className="text-[11px] font-semibold text-ink-4 uppercase tracking-wider">GrowQR Profile</p>
+              <p className="text-[11px] font-semibold text-ink-4 uppercase tracking-wider">YugtyJobs Profile</p>
               {app.growqr_profile_url ? (
                 <a href={app.growqr_profile_url} target="_blank" rel="noopener" className="flex items-center justify-between gap-2 px-3 py-2 rounded-xl bg-orange-lighter text-orange text-[14px] hover:bg-orange-light transition-colors">
                   <span className="flex items-center gap-1.5">
@@ -380,7 +380,7 @@ export default async function InternshipApplicantDetailPage({ params }: { params
           <h2 className={`${HEADING} mb-4`}>Application Answers</h2>
           <div className="space-y-4">
             <div>
-              <p className="text-[13px] font-semibold text-ink mb-1.5">Why do you want to intern with GrowQR?</p>
+              <p className="text-[13px] font-semibold text-ink mb-1.5">Why do you want to intern with YugtyJobs?</p>
               <p className="text-[14px] md:text-[15px] text-ink-2 leading-relaxed">{app.why_intern}</p>
             </div>
             {app.additional_notes && (

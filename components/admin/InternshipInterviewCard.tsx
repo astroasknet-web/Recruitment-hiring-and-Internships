@@ -32,10 +32,10 @@ function formatDay(iso: string | null): string | null {
 }
 
 /**
- * Where the assessment the candidate took in the GrowQR app shows up, and
+ * Where the assessment the candidate took in the YugtyJobs app shows up, and
  * where the human rounds that follow are scheduled.
  *
- * Sits directly under the GrowQR Profile card because the two answer the same
+ * Sits directly under the YugtyJobs Profile card because the two answer the same
  * question from different angles: the profile is what the candidate claims,
  * the assessment is what the product measured. HR reads them together and
  * then decides whether a final discussion is worth booking.
@@ -66,7 +66,7 @@ export default async function InternshipInterviewCard({
         <div>
           <h2 className="text-[15px] md:text-[16px] font-semibold text-ink">Interview &amp; Assessment</h2>
           <p className="text-[13px] text-ink-4 mt-0.5">
-            Round 1 runs in the GrowQR app. Later rounds are booked by the team.
+            Round 1 runs in the YugtyJobs app. Later rounds are booked by the team.
           </p>
         </div>
         <InternshipInterviewActions
@@ -86,7 +86,7 @@ export default async function InternshipInterviewCard({
           <Bot className="w-6 h-6 text-ink-4 mx-auto mb-2.5" />
           <p className="text-[14px] font-medium text-ink-2">No assessment yet</p>
           <p className="text-[13px] text-ink-4 mt-1 max-w-[420px] mx-auto leading-relaxed">
-            Invite {candidateName.split(" ")[0]} to the RQ-Vera assessment in the GrowQR app.
+            Invite {candidateName.split(" ")[0]} to the RQ-Vera assessment in the YugtyJobs app.
             The score and breakdown appear here as soon as it is finished.
           </p>
         </div>
@@ -233,7 +233,7 @@ function RoundCard({ interview }: { interview: Interview }) {
           interview.status !== "completed" && (
             <p className="text-[14px] text-ink-3">
               {isAi
-                ? "Waiting for the candidate to finish the assessment in the GrowQR app."
+                ? "Waiting for the candidate to finish the assessment in the YugtyJobs app."
                 : "Not yet held."}
               {interview.due_at && ` Due ${formatDay(interview.due_at)}.`}
             </p>
@@ -305,7 +305,7 @@ function RoundCard({ interview }: { interview: Interview }) {
               product produced, so every completed round says which it was. */}
           <span className="text-[12px] text-ink-4 ml-auto">
             {interview.source === "app_sync"
-              ? `Synced from GrowQR app${interview.completed_at ? ` · ${formatWhen(interview.completed_at)}` : ""}`
+              ? `Synced from YugtyJobs app${interview.completed_at ? ` · ${formatWhen(interview.completed_at)}` : ""}`
               : interview.recorded_by
                 ? `Recorded by ${interview.recorded_by}`
                 : "Created in the admin portal"}

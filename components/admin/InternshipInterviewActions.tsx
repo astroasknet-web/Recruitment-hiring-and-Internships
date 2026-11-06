@@ -171,7 +171,7 @@ export default function InternshipInterviewActions({
             onClick={runSync}
             disabled={syncing}
             className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-black/[0.12] bg-white text-ink-2 text-[13px] font-semibold hover:bg-cream/50 transition-colors disabled:opacity-50"
-            title="Pull the latest assessment result from the GrowQR app"
+            title="Pull the latest assessment result from the YugtyJobs app"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${syncing ? "animate-spin" : ""}`} />
             Sync results
@@ -199,7 +199,7 @@ export default function InternshipInterviewActions({
               <>
                 <p className="text-[14px] text-ink-2 leading-relaxed">
                   This opens round 1 for <span className="font-semibold">{candidateName}</span>, an
-                  assessment run by RQ-Vera inside the GrowQR app. The score, breakdown and summary
+                  assessment run by RQ-Vera inside the YugtyJobs app. The score, breakdown and summary
                   land on this page once it is finished.
                 </p>
                 <div className="mt-4">

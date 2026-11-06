@@ -5,9 +5,9 @@ import { roleFromSlug } from "@/components/pages/internship/internship-data";
 import { canonicalUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Apply for an Internship | GrowQR",
+  title: "Apply for an Internship | YugtyJobs",
   description:
-    "Apply for an internship at GrowQR. Tell us about yourself, your skills, and the role you're interested in.",
+    "Apply for an internship at YugtyJobs. Tell us about yourself, your skills, and the role you're interested in.",
   alternates: { canonical: canonicalUrl("/growqr-internship/apply") },
 };
 

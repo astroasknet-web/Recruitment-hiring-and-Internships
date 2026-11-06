@@ -15,7 +15,7 @@ import { StudioScripts } from "@/components/studio/studio-ui";
 import { StudioStyles, TemplateCard, UpgradeDialog } from "@/components/studio/studio-parts";
 import { savePrefsAction, useTemplateAction } from "./actions";
 
-export const metadata: Metadata = { title: "Resume Studio | GrowQR" };
+export const metadata: Metadata = { title: "Resume Studio | YugtyJobs" };
 export const dynamic = "force-dynamic";
 
 const fmtDay = (s: string, withYear = false) =>

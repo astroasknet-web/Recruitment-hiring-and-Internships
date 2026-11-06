@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 /**
- * The applicant's GrowQR profile photo.
+ * The applicant's YugtyJobs profile photo.
  *
  * Three sources, in order:
  *

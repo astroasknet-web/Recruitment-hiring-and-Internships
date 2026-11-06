@@ -6,7 +6,7 @@ import { btnDark, box, ConsolePage, field, Stats } from "@/components/admin/cons
 import { adminGate } from "../gate";
 import { studioPlanAction } from "../actions";
 
-export const metadata: Metadata = { title: "Resume Studio plans | GrowQR", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Resume Studio plans | YugtyJobs", robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";
 
 const th = "py-2 pr-3 text-left font-medium text-ink-4";

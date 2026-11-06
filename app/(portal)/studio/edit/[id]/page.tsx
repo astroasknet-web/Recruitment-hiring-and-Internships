@@ -12,7 +12,7 @@ import { PortalPage } from "@/components/portal/shell";
 import { StudioScripts } from "@/components/studio/studio-ui";
 import { StudioStyles, UpgradeDialog } from "@/components/studio/studio-parts";
 
-export const metadata: Metadata = { title: "Edit your resume | GrowQR" };
+export const metadata: Metadata = { title: "Edit your resume | YugtyJobs" };
 export const dynamic = "force-dynamic";
 
 /** JSON for a <script type="application/json"> element: nothing in it can close the tag or start a comment. */

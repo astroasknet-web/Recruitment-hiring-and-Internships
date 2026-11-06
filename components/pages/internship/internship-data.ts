@@ -106,7 +106,7 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
     chips: ["Python or JavaScript", "Git", "AI/ML curious"],
     reportingTo: "Project Lead, Tech",
     overview:
-      "Work with the engineering and product teams on the design, development and delivery of features on GrowQR's agentic AI platform. You get hands-on exposure to real product cycles, cross-functional coordination and applied AI development in a fast-moving startup.",
+      "Work with the engineering and product teams on the design, development and delivery of features on YugtyJobs's agentic AI platform. You get hands-on exposure to real product cycles, cross-functional coordination and applied AI development in a fast-moving startup.",
     responsibilities: [
       "Plan, track and execute assigned modules and features within the product roadmap",
       "Support development, testing and debugging across the platform under senior engineer guidance",
@@ -124,7 +124,7 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
       "Exposure to AI/ML concepts or project coordination is a plus, not a requirement",
     ],
     gain: [
-      "Direct mentorship from GrowQR's founding and engineering team",
+      "Direct mentorship from YugtyJobs's founding and engineering team",
       "Real ownership of product modules inside a live agentic AI platform",
       ...COMMON_GAIN,
     ],
@@ -140,12 +140,12 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
     chips: ["Figma", "Visual design", "Portfolio"],
     reportingTo: "Design, Product",
     overview:
-      "Shape how people experience GrowQR, from product interfaces to marketing and brand assets. You work across product design and visual communication, turning ideas into clean, usable, on-brand design.",
+      "Shape how people experience YugtyJobs, from product interfaces to marketing and brand assets. You work across product design and visual communication, turning ideas into clean, usable, on-brand design.",
     responsibilities: [
       "Design wireframes, mockups and high-fidelity UI screens for web and product features",
       "Create graphics, social creatives, decks and marketing collateral within brand guidelines",
       "Work with product and engineering to translate requirements into intuitive user flows",
-      "Maintain and evolve GrowQR's design system, style guides and asset libraries",
+      "Maintain and evolve YugtyJobs's design system, style guides and asset libraries",
       "Run basic usability checks and fold the feedback into the next iteration",
       "Support design for internal decks, event materials and campus outreach assets",
     ],
@@ -159,7 +159,7 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
     ],
     gain: [
       "Portfolio-ready product design and branding work from a live AI startup",
-      "Mentorship from design and product leadership at GrowQR",
+      "Mentorship from design and product leadership at YugtyJobs",
       ...COMMON_GAIN,
     ],
   },
@@ -169,18 +169,18 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
     title: "Social Media",
     category: "Marketing",
     icon: Megaphone,
-    summary: "Own the day-to-day voice of GrowQR across LinkedIn, Instagram and beyond.",
+    summary: "Own the day-to-day voice of YugtyJobs across LinkedIn, Instagram and beyond.",
     chips: ["Content calendars", "Copywriting", "Canva or CapCut"],
     reportingTo: "Social Media, Branding",
     overview:
-      "Build brand visibility among students, professionals and the HR-tech community through consistent, engaging, on-brand content, and own the daily rhythm of GrowQR's social presence.",
+      "Build brand visibility among students, professionals and the HR-tech community through consistent, engaging, on-brand content, and own the daily rhythm of YugtyJobs's social presence.",
     responsibilities: [
       "Plan, create and schedule content calendars across LinkedIn, Instagram and other platforms",
-      "Draft captions, posts and short-form content in GrowQR's brand voice",
+      "Draft captions, posts and short-form content in YugtyJobs's brand voice",
       "Track engagement, follower growth and campaign performance, and report what you learn",
       "Work with the design team on creatives, reels and campaign visuals",
       "Watch trends, competitor activity and conversations in the HR-tech and AI space",
-      "Promote GrowQR initiatives such as the Campus Ambassador Program and product launches",
+      "Promote YugtyJobs initiatives such as the Campus Ambassador Program and product launches",
     ],
     lookingFor: [
       "Pursuing or recently completed a degree in Marketing, Mass Communication or a related field",
@@ -206,7 +206,7 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
     chips: ["Community ops", "Communication", "Trackers"],
     reportingTo: "Campus and Community Programs",
     overview:
-      "Nurture and grow GrowQR's student and professional community, including the Campus Ambassador Program, by driving engagement, onboarding and communication across community channels.",
+      "Nurture and grow YugtyJobs's student and professional community, including the Campus Ambassador Program, by driving engagement, onboarding and communication across community channels.",
     responsibilities: [
       "Support onboarding and daily engagement of campus ambassadors and community members",
       "Run community channels (WhatsApp, Discord, email) and answer member queries promptly",
@@ -239,7 +239,7 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
     chips: ["Outbound", "CRM hygiene", "B2B SaaS"],
     reportingTo: "Sales and Marketing",
     overview:
-      "Support GrowQR's outreach to prospective clients and partners, helping build the pipeline, sharpen the messaging and drive awareness of the platform among HR and business leaders.",
+      "Support YugtyJobs's outreach to prospective clients and partners, helping build the pipeline, sharpen the messaging and drive awareness of the platform among HR and business leaders.",
     responsibilities: [
       "Research and build lists of prospective clients, partners and decision-makers",
       "Support outbound over email, LinkedIn and calls, and help qualify inbound leads",
@@ -258,7 +258,7 @@ export const INTERNSHIP_ROLES: InternshipRole[] = [
     ],
     gain: [
       "Hands-on exposure to B2B sales cycles and go-to-market strategy at an AI startup",
-      "Mentorship from GrowQR's sales and marketing leadership",
+      "Mentorship from YugtyJobs's sales and marketing leadership",
       ...COMMON_GAIN,
     ],
   },

@@ -20,12 +20,12 @@ const rupees = (n: number) => "₹" + n.toLocaleString("en-IN");
 const dmy = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  if (!databaseConfigured()) return { title: "Internship | GrowQR" };
+  if (!databaseConfigured()) return { title: "Internship | YugtyJobs" };
   const job = await jobs.bySlug(clean((await params).slug));
-  if (!job) return { title: "Internship not found | GrowQR", robots: { index: false, follow: true } };
+  if (!job) return { title: "Internship not found | YugtyJobs", robots: { index: false, follow: true } };
   const desc = `${job.title} in ${job.loc}, ${rupees(job.stipend)}/month for ${job.weeks} weeks. ${job.about}`;
   return {
-    title: `${job.title} at ${job.company} | GrowQR Internships`,
+    title: `${job.title} at ${job.company} | YugtyJobs Internships`,
     description: Array.from(desc).slice(0, 155).join(""),
     alternates: { canonical: `${SITE_URL}/internships/${job.slug}` },
     robots: { index: true, follow: true },

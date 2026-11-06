@@ -51,11 +51,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "GrowQR: One QR. One Identity. Unlocks Growth.",
-  description: "Specialised AI agents. One QR. Your career edge, activated. The AI-driven proof-of-skill platform powering the future of readiness.",
-  keywords: "GrowQR, GrowQR.ai, growqr ai, growqr platform, RQ-Score, proof of skill, skill verification, talent verification, workforce intelligence, AI talent platform, career readiness, QR code skills, enterprise talent, smart city workforce, not grok, not grow company, specialised AI agents, AI career Edge",
-  authors: [{ name: "GrowQR" }],
-  publisher: "GrowQR",
+  title: "YugtyJobs: Jobs and internships, verified",
+  description: "Find verified jobs and internships, prove your skills with a scannable QR Score and apply with no fees.",
+  keywords: "YugtyJobs, jobs, internships, verified jobs, QR Score, Skill Passport, resume studio, fresher jobs, recruitment, hiring",
+  authors: [{ name: "YugtyJobs" }],
+  publisher: "YugtyJobs",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: `${SITE_URL}/`,
@@ -72,20 +72,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "GrowQR: One QR. One Identity. Unlocks Growth.",
-    description: "Specialised AI agents. One QR. Your career edge, activated.",
+    title: "YugtyJobs: Jobs and internships, verified",
+    description: "Find verified jobs and internships, prove your skills with a scannable QR Score and apply with no fees.",
     type: "website",
     url: `${SITE_URL}/`,
-    siteName: "GrowQR",
+    siteName: "YugtyJobs",
     images: [OG_IMAGE],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@Growqr",
-    creator: "@Growqr",
-    title: "GrowQR.ai | Specialised AI Agents",
-    description: "Specialised AI agents. One QR. Your career edge, activated.",
+    title: "YugtyJobs | Jobs and internships",
+    description: "Find verified jobs and internships, prove your skills with a scannable QR Score and apply with no fees.",
     // summary_large_image needs a ~1200x630 asset; logo.png is a 385x130
     // wordmark and was being rejected/letterboxed.
     images: [OG_IMAGE.url],
@@ -147,8 +145,8 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "@id": `${SITE_URL}/#organization`,
-              "name": "GrowQR",
-              "alternateName": ["GrowQR.ai", "Grow QR", "GrowQR AI"],
+              "name": "YugtyJobs",
+              "alternateName": ["GrowQR.ai", "Grow QR", "YugtyJobs AI"],
               "url": SITE_URL,
               "logo": {
                 "@type": "ImageObject",
@@ -159,12 +157,12 @@ export default async function RootLayout({
                 "height": 130
               },
               "image": `${SITE_URL}${OG_IMAGE.url}`,
-              "description": "GrowQR provides specialised AI agents and the RQ-Score system, making talent visible, verified, and valuable.",
+              "description": "YugtyJobs provides specialised AI agents and the RQ-Score system, making talent visible, verified, and valuable.",
               "slogan": "One QR. Infinite Potential.",
               "foundingDate": "2024",
                "founder": {
                 "@type": "Person",
-                "name": "GrowQR Team"
+                "name": "YugtyJobs Team"
               },
               "email": "support@growqr.ai",
               "sameAs": [
@@ -184,7 +182,7 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "@id": `${SITE_URL}/#website`,
-              "name": "GrowQR",
+              "name": "YugtyJobs",
               "alternateName": "GrowQR.ai",
               "url": SITE_URL,
               "description": "The AI-driven proof-of-skill platform powering the future of readiness",
@@ -207,8 +205,8 @@ export default async function RootLayout({
             __html: serializeJsonLd({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "GrowQR",
-              "alternateName": ["GrowQR.ai", "GrowQR Platform", "RQ-Score Platform"],
+              "name": "YugtyJobs",
+              "alternateName": ["GrowQR.ai", "YugtyJobs Platform", "RQ-Score Platform"],
               "description": "AI-driven proof-of-skill platform that provides RQ-Score and specialised AI agents for workforce intelligence.",
               "url": SITE_URL,
               "applicationCategory": "BusinessApplication",

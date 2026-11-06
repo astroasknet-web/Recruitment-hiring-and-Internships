@@ -25,7 +25,7 @@ export default function InternshipHero() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
             </span>
             <span className="text-[12px] font-bold uppercase tracking-[0.12em] text-white md:text-[13px]">
-              GrowQR Internship Program
+              YugtyJobs Internship Program
             </span>
           </div>
 

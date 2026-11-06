@@ -154,7 +154,7 @@ export default function InternshipRoleModal({
                 <Section title="What you will gain" items={role.gain} />
 
                 <p className="text-[12.5px] leading-relaxed text-ink-4">
-                  Stipend as per GrowQR internship policy.
+                  Stipend as per YugtyJobs internship policy.
                 </p>
               </div>
             </div>

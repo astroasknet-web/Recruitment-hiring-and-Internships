@@ -823,13 +823,13 @@ export function AmbassadorBanner({ persona }: { persona: "students" | "institute
   const copy = {
     students: {
       eyebrow: "For Students Like You",
-      headline: "Be a Representative of GrowQR on your campus.",
-      sub: "Lead, grow, and get rewarded. The GrowQR Campus Ambassador Program ensures students gain real-world experience while diving into AI-powered careers.",
+      headline: "Be a Representative of YugtyJobs on your campus.",
+      sub: "Lead, grow, and get rewarded. The YugtyJobs Campus Ambassador Program ensures students gain real-world experience while diving into AI-powered careers.",
       perks: ["Swag Kit & Merch", "Monetary Rewards", "Internship Fast-Track", "Certificate + LoR", "Exclusive Events"],
     },
     institutes: {
       eyebrow: "For Your Students",
-      headline: "Bring GrowQR to your campus.",
+      headline: "Bring YugtyJobs to your campus.",
       sub: "Position your institution at the forefront of AI-driven career readiness. The Campus Ambassador Program fosters student leadership, strengthens industry engagement, and cultivates future-ready talent through a national network of ambitious student leaders.",
       perks: ["Campus Recognition", "Student Leadership", "AI Career Tools", "National Network", "Placement Edge"],
     },
@@ -871,7 +871,7 @@ export function AmbassadorBanner({ persona }: { persona: "students" | "institute
                 <div className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-orange to-[#ff8c55] px-4 py-2 shadow-[0_4px_16px_rgba(255,106,47,0.32)]">
                   <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse shrink-0" />
                   <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-white">
-                    GrowQR AI Global Campus Program
+                    YugtyJobs AI Global Campus Program
                   </span>
                 </div>
 

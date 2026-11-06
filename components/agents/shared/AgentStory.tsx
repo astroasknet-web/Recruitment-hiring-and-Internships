@@ -21,7 +21,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
    rail auto-advances while a single minimal illustration on the right morphs to
    match the active step. Each agent supplies its own story steps + visuals; this
    shell appends two shared payoff beats — "Track Your Readiness" (RQ-Score ring)
-   and "Unlock Rewards" (GrowQR points + perks) — so pages never re-declare them.
+   and "Unlock Rewards" (YugtyJobs points + perks) — so pages never re-declare them.
 
    Visuals are deliberately illustrations, not working product screens: minimal
    UI, almost no text, orange only for highlights. */
@@ -146,7 +146,7 @@ function RewardsState() {
         <div>
           <span className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.1em] text-orange-deep">
             <Icon icon="solar:medal-star-bold" className="size-4" aria-hidden />
-            GrowQR Points
+            YugtyJobs Points
           </span>
           <div className="mt-1 flex items-end gap-2">
             <span className="text-[52px] font-bold leading-[0.9] tracking-[-0.03em] text-ink">

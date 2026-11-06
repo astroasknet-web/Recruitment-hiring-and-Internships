@@ -109,7 +109,7 @@ function RqScore({ score, triage, href }: { score: number | null; triage: string
       target="_blank"
       rel="noopener"
       onClick={(e) => e.stopPropagation()}
-      title="Open GrowQR profile"
+      title="Open YugtyJobs profile"
       className="inline-block hover:opacity-70 transition-opacity"
     >
       {inner}
