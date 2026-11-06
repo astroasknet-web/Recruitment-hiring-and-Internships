@@ -6,8 +6,7 @@ import { SITE_URL } from "@/lib/seo";
  * Footer settings for Yugty Recruitment & Hiring. The layout is the standard footer used by every Yugty web application
  * (components/standard-footer); only the values below are specific to this app.
  *
- * The app family panel appears once at least two apps have a URL: set NEXT_PUBLIC_APP_URL_OVERSEAS, _LEARNING, _INTERNSHIPS and
- * _RECRUITMENT (full https:// URLs) for the other apps.
+ * The app family panel lists all six Yugty sites (home, AI, Overseas, Learning, Jobs, Technology). Override a URL with NEXT_PUBLIC_APP_URL_HOME, _AI, _OVERSEAS, _LEARNING, _JOBS or _TECHNOLOGY.
  */
 const env = (k: string) => (process.env[k] ?? "").trim();
 
@@ -24,10 +23,12 @@ export const FOOTER: FooterConfig = {
   },
   appsTitle: "One family. One account.",
   apps: [
-    { key: "overseas", name: "Overseas Education", href: env("NEXT_PUBLIC_APP_URL_OVERSEAS"), icon: "Globe", external: true },
-    { key: "learning", name: "Learning", href: env("NEXT_PUBLIC_APP_URL_LEARNING"), icon: "GraduationCap", external: true },
-    { key: "internships", name: "Internships", href: env("NEXT_PUBLIC_APP_URL_INTERNSHIPS"), icon: "Briefcase", external: true },
-    { key: "recruitment", name: "Recruitment & Hiring", href: "/", icon: "Users" },
+    { key: "home", name: "Yugti", href: env("NEXT_PUBLIC_APP_URL_HOME") || "https://yugti.com", icon: "Home", external: true },
+    { key: "ai", name: "Yugti AI", href: env("NEXT_PUBLIC_APP_URL_AI") || "https://yugti.ai", icon: "Sparkles", external: true },
+    { key: "overseas", name: "Overseas Education", href: env("NEXT_PUBLIC_APP_URL_OVERSEAS") || "https://yugtioverseaseducation.com", icon: "Globe", external: true },
+    { key: "learning", name: "Learning", href: env("NEXT_PUBLIC_APP_URL_LEARNING") || "https://yugtilearning.com", icon: "GraduationCap", external: true },
+    { key: "jobs", name: "Jobs", href: "/", icon: "Briefcase" },
+    { key: "technology", name: "Technology", href: env("NEXT_PUBLIC_APP_URL_TECHNOLOGY") || "https://yugtitechnology.com", icon: "Code2", external: true },
   ],
   newsletter: { label: "Get news and updates", button: "Join", endpoint: "/api/newsletter", source: "footer" },
   columns: [
