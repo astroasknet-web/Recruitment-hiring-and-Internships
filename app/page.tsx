@@ -17,13 +17,15 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
+    <>
     <div className={`vl ${display.variable} ${text.variable}`}>
       <a className="vl-skip" href="#main-content">Skip to content</a>
       <JobsHome />
-      <div className="yj-foot"><Footer /></div>
       <Script src="/yugtyjobs/fx.js" strategy="afterInteractive" />
       <Script src="/yugtyjobs/division.js" strategy="afterInteractive" />
       <Script src="/yugtyjobs/hire-qr.js" strategy="afterInteractive" />
     </div>
+    <div className="yj-foot"><Footer /></div>
+    </>
   );
 }
